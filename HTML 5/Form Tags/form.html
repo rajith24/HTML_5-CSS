@@ -10,46 +10,72 @@
 
 <body>
 
-
+<form name="employment" action="send.php" method="post">
  <table width="600" border="1" cellspacing="2" cellpadding="2">
     <tr>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
+      <td>Employment Application</td>
       <td></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>First Name</td>
+      <td><input type="text" name="fname" maxlength="50" /></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>Last Name</td>
+      <td><input type="text" name="lname" maxlength="50" /></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td> Position </td>
+      <td>	<select name = "position">
+				<option value = "AC">Accountant</option>
+				<option value="AD">Administrator</option>
+			    <option value="RE">Receptonist</option>
+			    <option value="SU">Supervisor</option>
+			</select>
+		</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td> Experience Level </td>
+      <td>	<select name = "position">
+				<option value = "EN">Entry Level</option>
+				<option value="SO">Some Experience</option>
+			    <option value="VE">Very Experienced</option>
+			</select>
+		</td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>Job Type</td>
+      <td>
+			<input type="checkbox" name="ft"/>Full Time
+			<input type="checkbox" name="pt"/>Part Time
+			<input type="checkbox" name="ct"/>Contract
+
+	  </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>Employment Status</td>
+      <td>
+		<input type="radio" name="estatus" value="employed" /> Employed
+		<input type="radio" name="estatus" value="employed" /> Unemployed
+		<input type="radio" name="estatus" value="employed" /> Student
+	  </td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
+      <td>Additional Comments</td>
+      <td>
+			<textarea name="comments" cols="45" rows="5" ></textarea>
+	  </td>
+    </tr>
+    <tr>
+	  <td></td>
+      <td>
+		<input type="submit" name="submit" value="Submit"/>
+		<input type="reset" name="reset" value="Reset"/>
+	  </td>
+      
     </tr>
   </table>
-
+</from>
 
 </body>
 </html>
