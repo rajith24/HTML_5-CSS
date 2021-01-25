@@ -1,0 +1,103 @@
+body{
+    background-color: #85dcb0;
+}
+
+nav{
+    display:grid;
+    justify-content:right;
+    margin-right : 16px;
+    margin:auto;
+    animation: slidein;
+    animation-fill-mode: forwards;
+
+}
+
+#profile-pic{
+    border-radius: 50%;
+    display:block;
+    animation: slidein;
+
+    
+
+}
+
+
+section{
+    padding-top: 15%;    
+}
+
+
+.lds-dual-ring {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  
+
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid rgb(94, 42, 42);
+    border-color: rgb(243, 84, 84) transparent rgb(59, 35, 35) transparent;
+    animation: lds-dual-ring 1s linear infinite ;
+    animation-fill-mode: forwards ;
+    
+}
+
+
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+        width: 50%;
+        height:50%;
+    }
+    100% {
+        transform: rotate(360deg);
+        width:100%;
+        
+    }
+    
+}
+
+
+  
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+}
+
+
+
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+  
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+/*******************************************************/

@@ -1,0 +1,457 @@
+body{
+    margin:0px;
+    padding:0;
+    /* animation: bgdrop 1s infinite; */
+    background-color : white;    
+}
+
+header{
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+
+.menu-item1{
+    font-size: 26px;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration:none;
+    position: relative;
+    top: -14px;
+    text-align: left;
+    margin-right: 1250px;
+    background-color: white;
+    visibility: hidden;
+}
+.menu-item{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    position: relative;
+    top: -16px;
+    text-align: right;
+    margin-right: 16px;
+    visibility: hidden;
+    
+}
+.menu-item:hover{
+    text-decoration: underline;
+}
+nav{
+    text-align: right;
+    display: none;
+}
+
+#profile-pic{
+    border: 0;
+    border-radius: 50%;
+    margin: -1px;
+    position: relative;
+    height: 32px;
+    width: 32px;
+    top:-5px;
+    margin-right: 16px;
+    visibility: hidden;
+    margin-top: 36px;
+}
+
+#ball{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(10, 10, 9);
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+}
+#background{
+    height: 0px;
+    width: screen ;
+    background-color: lightcoral;
+    display:block;
+    /* animation : bgdrop 1s 1; */
+}
+
+#main{
+    margin:0px;
+    padding:0;;
+    /* animation: bgdrop 1s infinite; */
+    background-color : white;       
+}
+
+#shadow{
+    width: 25px;
+    height: 5px;
+    opacity: 0.2;
+    background-color :rgb(1, 3, 7);
+    border-radius: 50%;
+    visibility: hidden;
+    top: 0;
+    left:50%;
+    position: relative;
+    /* transform: translate(-50%, -50%); */
+    transform: translate(-8px, 120px );
+}
+
+
+#ball{
+    animation : drop 250ms linear 0ms forwards , drop1 750ms linear 250ms forwards, drop2 750ms linear 1001ms forwards, drop3 750ms linear 1750ms forwards, centerball 250ms linear 1 2500ms forwards, centerball1 200ms linear 5 2750ms forwards,
+    shoot 250ms linear 1 3750ms forwards, shoot1 1000ms linear 1 4000ms forwards;
+}
+#background{
+    animation : bgdrop 250ms linear 0ms forwards , bgdrop1 250ms linear 1000ms forwards, bgdrop2 250ms linear 1750ms forwards;
+
+}
+
+#shadow{
+    animation : shade 750ms linear 250ms forwards, shade1 501ms linear 1250ms forwards, shade2 500ms linear 2000ms forwards;
+}
+
+
+@keyframes shade {
+    0%{
+        visibility:visible;
+        opacity : 0.2;
+        width:5px
+    }
+    25%{
+        visibility:visible;
+        opacity : 0.7;
+        width : 25px;
+    }
+    50%{
+        visibility:visible;
+        opacity : 0.4;
+        width : 35px;
+    }
+    75%{
+        visibility:visible;
+        opacity : 0.7;
+        width : 25px;
+    }
+    100%{
+        visibility:hidden;
+        opacity: 0.2;
+        width: 5px;
+    }
+}
+
+@keyframes shade1 {
+    0%{
+        visibility:visible;
+        opacity : 0.2;
+        width:5px;
+        transform: translate(-8px, 320px );
+    }
+    25%{
+        visibility:visible;
+        opacity : 0.7;
+        width : 25px;
+        transform: translate(-8px, 320px );
+    }
+    50%{
+        visibility:visible;
+        opacity : 0.4;
+        width : 35px;
+        transform: translate(-8px, 320px );
+    }
+    75%{
+        visibility:visible;
+        opacity : 0.7;
+        width : 25px;
+        transform: translate(-8px, 320px );
+    }
+    100%{
+        visibility:hidden;
+        opacity: 0.2;
+        width: 5px;
+        transform: translate(-8px, 320px );    
+    }
+}
+
+@keyframes shade2 {
+    0%{
+        visibility:visible;
+        opacity : 0.2;
+        width:5px;
+        transform: translate(-8px, 720px );
+    }
+    25%{
+        visibility:visible;
+        opacity : 0.7;
+        width : 25px;
+        transform: translate(-8px, 720px );
+    }
+    50%{
+        visibility:visible;
+        opacity : 0.4;
+        width : 35px;
+        transform: translate(-8px, 720px );
+    }
+    75%{
+        visibility:visible;
+        opacity : 0.7;
+        width : 25px;
+        transform: translate(-8px, 720px );
+    }
+    100%{
+        visibility:visible;
+        opacity: 0.2;
+        width: 5px;
+        transform: translate(-8px, 720px );
+    }
+}
+@keyframes drop {
+    0%{
+        transform: translate(-10px, 10px);
+    }
+
+    100%{
+        transform: translate(-10px, 125px );
+        width: 30px; 
+    }
+}
+
+@keyframes drop1 {
+    0%{
+        transform: translate(-10px, 125px);
+        width: 30px; 
+    }
+    50%{
+        transform: translate(-10px, 20px );
+        width: 25px; 
+    }
+    100%{
+        transform: translate(-10px, 125px );
+        width: 30px; 
+   
+    }
+}
+@keyframes drop2 {
+    0%{
+        transform: translate(-10px, 126px);
+        width: 30px; 
+    }
+    50%{
+        transform: translate(-10px, 20px );
+        width: 25px; 
+    }
+    100%{
+        transform: translate(-10px, 326px );
+        width: 30px; 
+    }
+}
+
+
+@keyframes drop3 {
+    0%{
+        transform: translate(-10px, 326px);
+        width: 30px; 
+    }
+    50%{
+        transform: translate(-10px, 155px );
+        width: 25px; 
+    }
+    100%{
+        transform: translate(-10px, 726px );
+        width: 25px; 
+    }
+}
+
+
+@keyframes bgdrop {
+
+    0%{
+        background-color : lightgreen;
+        width: screen;
+        height : 10px;
+
+    }
+    100%{
+        background-color: lightgreen;
+        width: screen;
+        height : 150px;
+    }
+}
+
+@keyframes bgdrop1 {
+
+    0%{
+        background-color : lightgreen;
+        width: screen;
+        height : 150px;
+
+    }
+    100%{
+        background-color: lightgreen;
+        width: screen;
+        height : 350px;
+    }
+}
+@keyframes bgdrop2 {
+
+    0%{
+        background-color : lightgreen;
+        width: screen;
+        height : 350px;
+
+    }
+    100%{
+        background-color: lightgreen;
+        width: screen;
+        height : 753px;
+    }
+ }
+
+@keyframes navtop {
+    100%{
+        display:block;
+    }
+}
+
+
+@keyframes centerball{
+    0%{
+        transform: translate(-10px, 726px );
+        width: 25px;
+        height:25px;
+    }
+    25%{
+        transform: translate(-50px, 376px );
+        width: 23px;
+        height:23px;
+    }
+    50%{
+        transform: translate(-10px, 336px );
+        width: 20px;
+        height:20px;
+    }
+    75%{
+        transform: translate(40px, 376px );
+        width: 17px;
+        height:17px;
+    }
+    100%{
+        transform: translate(-10px, 416px );
+        width: 15px;
+        height:15px;
+    }
+}
+@keyframes centerball1{
+    0%{
+        transform: translate(-10px, 416px );
+        width: 15px;
+        height:15px;
+    }
+    25%{
+        transform: translate(-50px, 376px );
+        width: 15px;
+        height:15px;
+    }
+    50%{
+        transform: translate(-10px, 336px );
+        width: 15px;
+        height:15px;
+    }
+    75%{
+        transform: translate(40px, 376px );
+        width: 15px;
+        height:15px;
+    }
+    100%{
+        transform: translate(-10px, 416px );
+        width: 15px;
+        height:15px;
+    }
+}
+
+
+@keyframes shoot{
+    0%{
+        transform: translate(-10px, 416px );
+        width: 15px;
+        height:15px;
+    }
+    50%{	
+        transform: translate(-50px, 376px );
+        width: 15px;
+        height:15px;
+    }
+    100%{
+        transform: translate(720px, -30px);
+        width: 15px;
+        height:15px;
+    }
+}
+
+@keyframes shoot1{
+    0%{
+        transform: translate(720px, -30px);
+        width: 15px;
+        height:15px;
+    }
+    25%{
+        transform: translate(680px, -30px);
+        width: 15px;
+        height:15px;
+    }
+    50%{
+        transform: translate(640px, -30px);
+        width: 15px;
+        height:15px;
+    }
+    75%{
+        transform: translate(250px, -30px);
+        width: 15px;
+        height:15px;
+    }
+    100%{
+        transform: translate(-750px, -30px);
+        width: 15px;
+        height:15px;
+    }
+
+}
+
+#profile-pic{
+    animation: show 500ms linear 4000ms 1 forwards;
+}
+#contact{
+    animation: show 500ms linear 4125ms 1 forwards;
+}
+
+#home{
+    animation: show 500ms linear 4500ms 1 forwards;
+}
+
+.menu-item1{
+    animation: show 500ms linear 5000ms 1 forwards;
+}
+
+#nav {
+    animation: disp1 100ms linear 5000ms 1 forwards ;
+}
+
+@keyframes show{
+    0%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+@keyframes disp1{
+    100%{
+        display: block;
+    }
+}
+
+
+/* @keyframes centerball{
+    0%{}
+    25%{}
+    50%{}
+    75%{}
+    100%{}
+} */
+
