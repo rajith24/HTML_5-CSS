@@ -1,6 +1,7 @@
 import React from 'react';
 import product from './ProductData'
 import classes from './App.module.css'
+import sql from './pgsql'
 
 function App() {
   return (
@@ -40,7 +41,9 @@ function App() {
           <button className={classes.FeatureItem}>Heart Rate</button>
         </div>
         <button className={classes.PrimaryButton}>Buy Now</button>
+        sql
       </div>
+
     </div>
 
 

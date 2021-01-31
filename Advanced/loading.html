@@ -13,12 +13,14 @@
             crossorigin="anonymous">
         </script>
     </head>
+
     <body id="body">    
         <header>
             <nav id="nav">
-                <a class="menu-item1" id = "menu-item1">EDITH</a>   
-                <a class="menu-item" id="home" href="#home"> Home</a>
-                <a class="menu-item" id="contact" href="#contact"> Contact</a>
+                <a class="menu-item1" id = "menu-item1">RAJITH</a>   
+                <a class="menu-item" id="home" onclick="homeVisible()" target="_home" href="http://127.0.0.1:5500/home.html"> Home</a>
+                <a class="menu-item" id="pj" onclick="prjctVisible()" href="#project"> Projects</a>
+                <a class="menu-item" id="chart" href ="http://localhost:3000/" target="_parent"> Chart</a>
                 <img id="profile-pic" src="https://lh3.googleusercontent.com/ogw/ADGmqu_dvLIQxKk73dlnQXexaa_iXak4sIOnqIKcgGSqNQ=s64-c-mo" alt="profile-pic"/>
             </nav>
             <div id = "main">
@@ -28,20 +30,86 @@
                 </div>
             </div>
         </header>
-            <div id=projects >
+        <div >
+            <iframe id="frontpage" name="_home" scrolling="no">
+            </iframe>
+        </div>
+            <div class="projects" >
                 <table >
-                    <td>
-                        <tr>
+                    <tr>
+                        <td id="video">
                             <!-- <iframe width="956" height="538" src="https://drive.google.com/file/d/1RNi53ga4ZRSVpN7BXd8prToUqizNgccA/view?usp=sharing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                            <iframe width="250" height="250" name = "_lidar" id="lidar" controls="" loop="" autoplay="" frameborder="0" allowfullscreen></iframe>
-                        </tr><br/>
-                        <tr id="project" alt="Lidar Video">LIDAR <br/>
-                            <p>This is a live example of lidar data</p>
-                            <a id="link" href ="https://drive.google.com/uc?export=view&id=1RNi53ga4ZRSVpN7BXd8prToUqizNgccA" target="_lidar">freeCodeCamp</a>
-                        </tr>
-                    </td>
+                            <iframe width="250px" height="250px" name = "_lidar" id="lidar" controls="" loop="" autoplay="" frameborder="0" allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr> <td id="project" alt="Lidar Video"><h3>LIDAR SENSOR</h3> </td></tr>
+                    <tr> <td id="project"><p>Live lidar data collecting from an Autonomous Vehicle from CARLA to RVIZ.</p>
+                        <a id="link" href ="https://drive.google.com/uc?export=view&id=1RNi53ga4ZRSVpN7BXd8prToUqizNgccA" target="_lidar">freeCodeCamp</a>
+                        </td>
+                    </tr>
                 </table>
             </div>
+            <div class="projects" >
+                <table >
+                    <tr>
+                        <td id="video">
+                            <!-- <iframe width="956" height="538" src="https://drive.google.com/file/d/1RNi53ga4ZRSVpN7BXd8prToUqizNgccA/view?usp=sharing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <iframe width="250px" height="250px" name = "_lidar1" id="lidar" controls="" loop="" autoplay="" frameborder="0" allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr> <td id="project" alt="Lidar Video"><h3>OBSTACLE DETECTON</h3> </td></tr>
+                    <tr> <td id="project"><p>Path Planning for Autonomous Vehicle once it encounters any Obstacles.</p>
+                        <a id="link1" href ="https://drive.google.com/uc?export=view&id=1SATiWyErBcjM5qZR8he5woWTC8T0Fgdj" target="_lidar1">freeCodeCamp</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="projects" >
+                <table >
+                    <tr>
+                        <td id="video">
+                            <!-- <iframe width="956" height="538" src="https://drive.google.com/file/d/1RNi53ga4ZRSVpN7BXd8prToUqizNgccA/view?usp=sharing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <iframe width="250px" height="250px" name = "_lidar2" id="lidar" controls="" loop="" autoplay="" frameborder="0" allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr> <td id="project" alt="Lidar Video"><h3>MATLAB GUI</h3> </td></tr>
+                    <tr> <td id="project"><p>MATLAB GUI is used to control Autonomous Vehicle Placed in CARLA.</p>
+                        <a id="link2" href ="https://drive.google.com/uc?export=view&id=1DnevLtGQRPgeGjeIDeX7cYwvR5NwaASc" target="_lidar2">freeCodeCamp</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="projects" >
+                <table >
+                    <tr>
+                        <td id="video">
+                            <!-- <iframe width="956" height="538" src="https://drive.google.com/file/d/1RNi53ga4ZRSVpN7BXd8prToUqizNgccA/view?usp=sharing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <iframe width="250px" height="250px" name = "_lidar3" id="lidar" controls="" loop="" autoplay="" frameborder="0" allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr> <td id="project" alt="Lidar Video"><h3>2D LIVE MAPPING</h3> </td></tr>
+                    <tr> <td id="project"><p>LIDAR PointCloud data are plotted using OctoMapping</p>
+                        <a id="link3" href ="https://drive.google.com/uc?export=view&id=1EPSviJWYhFz1OgGaRr1TDBjUgJc5f9J8" target="_lidar3">freeCodeCamp</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="projects" >
+                <table >
+                    <tr>
+                        <td id="video">
+                            <!-- <iframe width="956" height="538" src="https://drive.google.com/file/d/1RNi53ga4ZRSVpN7BXd8prToUqizNgccA/view?usp=sharing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <iframe width="250px" height="250px" name = "_lidar4" id="lidar" controls="" loop="" autoplay="" frameborder="0" allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr> <td id="project" alt="Lidar Video"><h3>3D LIVE MAPPING</h3> </td></tr>
+                    <tr> <td id="project"><p>3D LIDAR PointCloud data are plotted using OctoMapping.</p>
+                        <a id="link4" href ="https://drive.google.com/uc?export=view&id=1RVtKyVh_ch5u7UAFttVqB0qMmcat1LUF" target="_lidar4">freeCodeCamp</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </body>
     <script type="text/javascript" src="/try.js">  </script>
 </html>
