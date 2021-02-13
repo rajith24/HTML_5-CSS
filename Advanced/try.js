@@ -10,7 +10,7 @@ var ballProp = window.getComputedStyle(ballDrop);
 var bgProp = window.getComputedStyle(bgDrop);
 var navg = window.getComputedStyle(navGation);
 
-console.log(navg)
+// console.log(navg)
 
 setTimeout(function show(){
     navGation.style.display="block";}
@@ -36,32 +36,67 @@ setTimeout(() => {document.getElementById("menu-item1").style.visibility = "visi
 setTimeout(() => {document.getElementById("nav").classList.add("sticky")}, 4900);
 
 var prjt = document.getElementById("projects");
+var chld= document.getElementsByClassName("child");
+var prnt= document.getElementById("parnt");
+var elements = document.getElementsByClassName("projects");
+var pre = document.getElementById("prev");
+var sectn = document.getElementById("section");
+var nxtbtn = document.getElementById("nextbtn");
 
-// var prjctprop = window.getComputedStyle(prjt);
-//########################
 
-// function prjctVisible(){
-//   console.log("prjctVisible")
-//   // prjt.style.visibility = "visible";
-//   document.querySelectorAll("projects").forEach(x => x.style.visibility = "visible");
-// }
+prnt.onmouseover = function(){
+  pre.style.opacity = 0.4;
+  nxtbtn.style.opacity = 0.4;
+  // sectn.style.height = "500" + "px";
+  // sectn.style.marginTop = "65px;"
+}
 
-// function homeVisible(){
-//   prjt.style.visibility = "hidden";
+prnt.onmouseout = function(){
+  pre.style.opacity = 0.7;
+  nxtbtn.style.opacity = 0.7;
+  // sectn.style.height = "500" + "px";
+  // sectn.style.marginTop = "100px;"
+}
 
-//   // document.querySelectorAll("projects").forEach(x => x.style.display = "none");
-// }
+pre.onmouseover = function(){pre.style.backgroundColor = "grey";pre.style.color = "black";}
+pre.onmouseout = function(){pre.style.backgroundColor = "black"; pre.style.color = "white";}
+nxtbtn.onmouseover = function(){nxtbtn.style.backgroundColor = "grey";nxtbtn.style.color = "black";}
+nxtbtn.onmouseout = function(){nxtbtn.style.backgroundColor = "black"; nxtbtn.style.color = "white";}
+
+pre.onclick = function(){
+  if(prnt.classList.contains("parent")){ prnt.classList.remove("parent");};
+  if(prnt.classList.contains("parentreverse")){ prnt.classList.remove("parentreverse");};
+  prnt.classList.add("parnt");
+  prnt.style.transform = "translate3d(" + "0" +"px," + "200" + "px," + "0" + "px)";
+  console.log('hi')
+  setTimeout(() => {  prnt.classList.add("parent");
+},100)
+}
+
+nxtbtn.onclick = function(){
+  if(prnt.classList.contains("parent")){ prnt.classList.remove("parent");};
+  if(prnt.classList.contains("parentreverse")){ prnt.classList.remove("parentreverse");};
+  prnt.classList.add("parnt");
+  prnt.style.transform = "translate3d(" + "-700" +"px," + "200" + "px," + "0" + "px)";
+  console.log('hi')
+  setTimeout(() => {  prnt.classList.add("parentreverse");
+},100)
+}
+
 
 function prjctVisible(){
     console.log("prjctVisible")
   var elements = document.getElementsByClassName("projects");
   for(var i=0; i<elements.length; i++) {
     elements[i].style.display = "inline-block";
-}
+  }
   console.log(elements[0]);
   document.getElementById("frontpage").style.visibility = "hidden";
-
-
+  document.getElementById("prev").style.visibility = "visible";
+  nxtbtn.style.visibility = "visible";
+  pre.style.opacity = 0.7;
+  // setInterval(() => {anime()},5000)
+  console.log('prjctVisible');
 }
 
 function homeVisible(){
@@ -70,23 +105,23 @@ function homeVisible(){
   for(var i=0; i<elements.length; i++) {
     elements[i].style.display = "none";
   } 
-console.log(elements[0]);
-document.getElementById("frontpage").style.visibility = "visible";
-
-
+  console.log(elements[0]);
+  document.getElementById("prev").style.visibility = "hidden";
+  nxtbtn.style.visibility = "hidden";
+  document.getElementById("frontpage").style.visibility = "visible";
 }
 
 
+var vid = document.getElementById("video");
 
+function playVid() {
+    vid.play();
+}
 
+function pauseVid() {
+    vid.pause();
+}
 
-
-// document.getElementById("contact").style.animation = "mynewmove 4s 2";
-// document.getElementById("home").style.animation = "mynewmove 4s 2";
-// document.getElementById("home").style.animation = "mynewmove 4s 2";
-
-
-// When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
 // Get the navbar
@@ -104,8 +139,6 @@ function myFunction() {
   }
 }
 
-// var opn = window.open("https://drive.google.com/uc?export=view&id=1RNi53ga4ZRSVpN7BXd8prToUqizNgccA");
-// window.moveTo("https://drive.google.com/uc?export=view&id=1RNi53ga4ZRSVpN7BXd8prToUqizNgccA");
 var htp = window.location.href;
 
 
@@ -113,21 +146,6 @@ var getUrl = document.getElementById("link");
 var lidar = document.getElementById("lidar");
 
 var propUrl = window.getComputedStyle(getUrl);
-
-function clk() {
-  $.get('https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest', function(){
-    if(this.readyState === 4){
-      if(this.status === 200){
-          console.log(JSON.parse(this.responseText));
-      }
-      else  {
-        console.log('ERROR');
-      }
-    }
-  })
-}
-
-clk()
 
 
 
@@ -166,7 +184,6 @@ console.log(elements[0]);
 document.getElementById("frontpage").style.display = "inline-block";
 document.getElementById("home").click();
 
-
 }, 4900);
 
 
@@ -180,3 +197,5 @@ function myFunction(e) {
 function showDrop() {
   document.getElementById("app-dropdown").style.visibility = "visible";
 }
+
+
