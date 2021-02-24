@@ -1,0 +1,103 @@
+.style {
+    margin: 0;
+    padding: 0px 0px 0 0;
+}
+
+.boxstyle{
+
+    width: 150px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;   
+}
+
+.bottom{
+    padding: 0px 0px 10px 0px;
+}
+
+.smallboxstyle{
+
+    width: 100px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cpupad{
+    margin: 0;
+    padding: 0 0 0 10px;
+
+}
+
+.cpupad1{
+    margin: 0;
+    padding: 0 0 0 0px;
+
+}
+
+.tablemargin>tbody>tr>td{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.canpad{
+    padding: 0px -2px 0px 0px;
+    /* position: relative;
+    overflow: hidden;
+    display: inline;
+    height: 128px;
+    
+    width: 250px;
+    transform: translate3d(-15px, 10px, 10px); */
+}
+
+.table>tbody>tr>td {
+    padding: 0px 0px 10px 0px;
+    margin: 0px 0px 0px 0px;
+    width: 1%;
+    
+}
+
+#chLine{
+    width:100%;
+    height:100%;
+    padding:0px;
+    margin:0px;
+
+}
+
+.table>thead>tr>td{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    width: 1%;
+}
+
+.boxes{
+    padding: 0px 0px 0px 0px;
+}
+
+.textspace{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    
+}
+
+.bdc{
+    /* background-color: lightblue; */
+    border:1px solid rgb(55, 146, 174);
+}
+
+.bgc{
+    background-color: lightgray;
+}
+
+option {
+    background-color: black !important;
+}
+
+/* .active{
+    background-color: lightblue !important;
+    
+} */

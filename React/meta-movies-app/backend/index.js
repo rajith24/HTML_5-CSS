@@ -27,7 +27,7 @@ app.use(cors());
 app.get('/', (req, res) => {
     
     // db.raw("\copy cpu_live from 'C:\\Program Files\\PostgreSQL\\13\\data\\data\\cpu_live.csv' csv header")
-    console.log("data2");
+    // console.log("data2");
     // db.raw("\copy cpu_live from 'C:\\Program Files\\PostgreSQL\\13\\data\\data\\cpu_live.csv' csv header")
     db.select ('*')
         .from('cpu_live')
@@ -47,12 +47,12 @@ app.get('/', (req, res) => {
     
     // db.copy ('cpu_live') .from ('C:\Program Files\PostgreSQL\13\data\data\cpu_live.csv') .delimiter (',') .csv .header;
     db('cpu_live').truncate().then((data) => {
-        console.log('Truncate');
+        console.log('Updating Table');
         // res.json(data.rows);
     })
     db.raw("\copy cpu_live from 'C:\\Program Files\\PostgreSQL\\13\\data\\data\\cpu_live.csv' csv header")
     .then((data) => {
-        console.log(data.rows);
+        console.log('Updating Database');
         // res.json(data.rows);
     })
 

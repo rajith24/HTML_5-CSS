@@ -1,0 +1,179 @@
+body {
+  /*   overflow-x: hidden; */
+  }
+  #root {
+  /*   min-width: 800px; */
+    outline: 1px dotted blue;
+    padding: 2rem 0 1rem;
+  }
+  h1,
+  h1.panel{
+    color: #3377DD;
+    margin: 0 0rem 1rem;
+    padding: 1rem 1rem 0;
+  }
+    h1 small.h1-small {
+      color: #3377DD;
+    }
+  h2 {
+    color: #DD7733;
+    margin: 0 0 1rem;
+    padding: 0;
+    outline: 0px solid red;
+  }
+    .ul-features h2 {
+      margin: 1rem 0 0 1rem;
+    }
+  h4 {
+    line-height: 1.4;
+  }
+  p {
+    outline: 0px solid green;
+    padding: 0.5rem 1.25rem 0;
+  }
+  /* Input Labels - 3 of them (1 hidden) */
+  
+  form > div {
+    white-space: nowrap;
+  }
+    label,
+    div.label {
+      display: inline-block;
+      font-weight: normal;
+      margin: 0;
+      padding: 0 1rem .75rem 0;
+      text-align: right;
+      white-space: normal;
+      width: 9rem;
+    }
+  
+  /* Form (left/top) | Timer Listing (right/bottom) */
+  /* @TODO: Add Responsive for XS vs SM+ (hor/vert) */
+  
+  /* @media */
+  
+  .width-50p {
+    display: inline-block;
+    margin: 0 0 0 1rem;
+    max-width: 48%;
+    outline: 0px solid red;
+    padding: 0;
+    vertical-align: top;
+  }
+    .timer-list {
+      margin-top: 2.5rem;
+    }
+    ul {
+      margin: 0;
+      outline: 0px solid red;
+      width: 80%;
+    }
+      li.padTopLi {
+        margin-top: 0.5rem;
+      }
+      li.padTopLi2 {
+        margin-top: 1.5rem;
+      }
+  
+  /* BUTTONS - TIMER FORM */
+  
+    /* Button - Set Timer (big) */
+    /* Button - Delete (small)  */
+  
+  button,
+  button.btn {
+    background-color: #ffffff;
+    border: 1px solid #3377dd;
+    box-shadow: 3px 3px 7px;
+    cursor: pointer;
+  }
+    .add-button-div {
+      margin-top: 0.75rem;
+      text-align: right;
+    }
+    button.btn-xs {
+      font-size: 0.85rem;
+      padding: .3rem .6rem;
+      box-shadow: 1px 1px 3px;
+      margin: 0.25rem 0;
+      line-height: 1;
+    }
+    button:hover,
+    button.btn:hover,
+    button:focus,
+    button.btn:focus {
+      background-color: #b3d7ff;
+    }
+    button:active,
+    button.btn:active {
+      background-color: #b3d7ff;
+      box-shadow: 0;
+    }
+  
+  /* TIMER LIST - Table */
+  
+  .timers-div table th,
+  .timers-div table td {
+    padding: 0 0.5rem;
+  }
+    .timers-div table tr th {
+      line-height: 1.1;
+      vertical-align: bottom;
+      padding-bottom: 0.5rem;
+    }
+    .timers-div table td {
+      border-top: 1px solid rgba(125,175,255,.75);
+    }
+    .timers-div table td.text-center {
+      text-align: center;
+    }
+  
+  /* MODAL */
+  
+  .modal-alert {
+    margin: 0 auto;
+    text-align: center;
+  }
+    .modal-content {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 5px solid #ffffff;
+      border-radius: 25px;
+    }
+      .modal-title,
+      .modal-subtitle {
+        color: #3377DD;
+        font-size: 26px;
+      }
+        .modal-title {
+          font-size: 30px;
+          font-weight: bold;
+        }
+      .modal-alert button,
+      .modal-alert button.btn{
+        border-radius: 60px;
+        font-size: 400%;
+        font-weight: bold;
+        height: 9rem;
+        line-height: 1.2;
+        margin: 1.5rem 1rem;
+        text-shadow: 2px 2px 9px red;
+        width: 80%;
+      }
+      .modal-alert button:hover, 
+      .modal-alert button.btn:hover, 
+      .modal-alert button:focus, 
+      .modal-alert button.btn:focus {
+        background-position: center;
+        border: 7px solid darkblue;
+        border-radius: 60px;
+        outline: 0;
+      }
+  
+  /* UTILITY / MISCELLANEOUS */
+  
+  .hidden {
+    visibility: hidden;
+  }
+  .nowrap {
+    white-space: nowrap;
+  }

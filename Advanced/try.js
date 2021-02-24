@@ -174,6 +174,17 @@ console.log(window.getComputedStyle(getUrl).href);
 // console.log(propUrl);
 }, 3000);
 
+window.onload = setTimeout(() => {var button = document.getElementById("link6").click();
+console.log(window.getComputedStyle(getUrl).href);
+// console.log(propUrl);
+}, 3000)
+
+window.onload = setTimeout(() => {var button = document.getElementById("link7").click();
+console.log(window.getComputedStyle(getUrl).href);
+// console.log(propUrl);
+}, 3000);
+
+
 setTimeout(() => {
   console.log("prjctVisible")
   var elements = document.getElementsByClassName("projects");

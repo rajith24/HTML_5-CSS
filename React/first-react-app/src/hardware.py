@@ -52,7 +52,8 @@ while (True):
     print("Total cores:", psutil.cpu_count(logical=True))
     # CPU frequencies
     cpufreq = psutil.cpu_freq()
-    print(f"Max Frequency: {cpufreq.max:.2f}Mhz")
+    print(cpufreq.max/1000)
+    print(f"Max Frequency: {cpufreq.max:f}Mhz")
     print(f"Min Frequency: {cpufreq.min:.2f}Mhz")
     print(f"Current Frequency: {cpufreq.current:.2f}Mhz")
     # CPU usage
